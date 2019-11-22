@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+
+
+    <ProgressBar
+        android:id="@+id/myProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/mListView"
+        android:layout_weight="0.5"
+        android:layout_gravity="center"
+
+
+        android:numColumns="auto_fit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1771C0"
+        android:fontFamily="@font/aclonica"
+
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:shadowRadius="5"
+
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:onClick="signOut"
+
+        android:text="SIGNOUT"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+</LinearLayout>

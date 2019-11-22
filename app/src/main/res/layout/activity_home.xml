@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/kuldeep"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="#000000"
+
+        android:backgroundTint="#1E88E5"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/kuldeepImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#FFFFFF"
+            android:padding="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kuldeep" />
+
+        <TextView
+            android:id="@+id/kuldeepName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/aclonica"
+
+            android:text="Kuld5eep Singh"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/user_names"
+            app:layout_constraintStart_toStartOf="@+id/createkuldeep"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/viewkuldeep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="view event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintBottom_toBottomOf="@+id/createkuldeep"
+            app:layout_constraintEnd_toEndOf="@+id/updatekuldeep"
+            app:layout_constraintStart_toStartOf="@+id/updatekuldeep"
+            app:layout_constraintTop_toTopOf="@+id/createkuldeep" />
+
+        <TextView
+            android:id="@+id/deletekuldeep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/aclonica"
+            android:text="delete event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createkuldeep" />
+
+        <TextView
+            android:id="@+id/createkuldeep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/aclonica"
+            android:text="create event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintEnd_toEndOf="@+id/deletekuldeep"
+            app:layout_constraintStart_toStartOf="@+id/deletekuldeep"
+            app:layout_constraintTop_toTopOf="@+id/kuldeepImage" />
+
+        <TextView
+            android:id="@+id/updatekuldeep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/aclonica"
+            android:text="modify event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deletekuldeep"
+            app:layout_constraintTop_toBottomOf="@+id/viewkuldeep" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/anju"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="#1E88E5"
+
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/anjuImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#FFFFFF"
+            android:padding="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kuldeep" />
+
+        <TextView
+            android:id="@+id/anjuName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/aclonica"
+            android:text="Anju Paul"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/user_names"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/viewanju"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="view event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintBottom_toBottomOf="@+id/createanju"
+            app:layout_constraintEnd_toEndOf="@+id/updateanju"
+            app:layout_constraintStart_toStartOf="@+id/updateanju"
+            app:layout_constraintTop_toTopOf="@+id/createanju" />
+
+        <TextView
+            android:id="@+id/deleteanju"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/aclonica"
+            android:text="delete event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createanju" />
+
+        <TextView
+            android:id="@+id/createanju"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/aclonica"
+            android:text="create event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintEnd_toEndOf="@+id/deleteanju"
+            app:layout_constraintStart_toStartOf="@+id/deleteanju"
+            app:layout_constraintTop_toTopOf="@+id/anjuImage" />
+
+        <TextView
+            android:id="@+id/updateanju"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/aclonica"
+            android:text="modify event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deleteanju"
+            app:layout_constraintTop_toBottomOf="@+id/viewanju" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/kamal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="#000000"
+
+        android:backgroundTint="#1E88E5"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/kamalImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#FFFFFF"
+            android:padding="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kuldeep" />
+
+        <TextView
+            android:id="@+id/kamalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/aclonica"
+            android:text="Kamaldeep Singh"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/user_names"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/createkamal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/viewkamal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="view event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintBottom_toBottomOf="@+id/createkamal"
+            app:layout_constraintEnd_toEndOf="@+id/updatekamal"
+            app:layout_constraintStart_toStartOf="@+id/updatekamal"
+            app:layout_constraintTop_toTopOf="@+id/createkamal" />
+
+        <TextView
+            android:id="@+id/deletekamal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/aclonica"
+            android:text="delete event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createkamal" />
+
+        <TextView
+            android:id="@+id/createkamal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/aclonica"
+            android:text="create event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintEnd_toEndOf="@+id/deletekamal"
+            app:layout_constraintStart_toStartOf="@+id/deletekamal"
+            app:layout_constraintTop_toTopOf="@+id/kamalImage" />
+
+        <TextView
+            android:id="@+id/updatekamal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/aclonica"
+            android:text="modify event"
+            android:textColor="#FFEB3B"
+            android:textSize="@dimen/events_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deletekamal"
+            app:layout_constraintTop_toBottomOf="@+id/viewkamal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

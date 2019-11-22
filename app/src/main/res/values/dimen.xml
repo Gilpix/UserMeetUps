@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="my_value">16dp</dimen>
+
+    <dimen name="events_text">12sp</dimen>
+    <dimen name="user_names">23dp</dimen>
+
+</resources>
