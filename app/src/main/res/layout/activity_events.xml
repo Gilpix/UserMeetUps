@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event id"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+        <EditText
+            android:id="@+id/eventID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="id" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="user id"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+        <EditText
+            android:id="@+id/userID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="user id" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Event Name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Location"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="location" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Stsrt Time"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+        <EditText
+            android:id="@+id/startTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="start time" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="End Time"
+            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+        <EditText
+            android:id="@+id/endTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="end time" />
+
+    </LinearLayout>
+
+</ScrollView>

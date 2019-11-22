@@ -54,26 +54,26 @@
             android:text="Kuldeep Singh"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/user_names"
-            app:layout_constraintBottom_toTopOf="@+id/deletekuldeep"
+            app:layout_constraintBottom_toTopOf="@+id/deleteEvents"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/createkuldeep"
+            app:layout_constraintStart_toStartOf="@+id/createEvents"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/viewkuldeep"
+            android:id="@+id/viewEvents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/aclonica"
             android:text="view event"
             android:textColor="#FFEB3B"
             android:textSize="@dimen/events_text"
-            app:layout_constraintBottom_toBottomOf="@+id/createkuldeep"
-            app:layout_constraintEnd_toEndOf="@+id/updatekuldeep"
-            app:layout_constraintStart_toStartOf="@+id/updatekuldeep"
-            app:layout_constraintTop_toTopOf="@+id/createkuldeep" />
+            app:layout_constraintBottom_toBottomOf="@+id/createEvents"
+            app:layout_constraintEnd_toEndOf="@+id/updateEvents"
+            app:layout_constraintStart_toStartOf="@+id/updateEvents"
+            app:layout_constraintTop_toTopOf="@+id/createEvents" />
 
         <TextView
-            android:id="@+id/deletekuldeep"
+            android:id="@+id/deleteEvents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -84,23 +84,24 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/createkuldeep" />
+            app:layout_constraintTop_toBottomOf="@+id/createEvents" />
 
         <TextView
-            android:id="@+id/createkuldeep"
+            android:id="@+id/createEvents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:fontFamily="@font/aclonica"
             android:text="create event"
             android:textColor="#FFEB3B"
+            android:onClick="dataBaseOpen"
             android:textSize="@dimen/events_text"
-            app:layout_constraintEnd_toEndOf="@+id/deletekuldeep"
-            app:layout_constraintStart_toStartOf="@+id/deletekuldeep"
+            app:layout_constraintEnd_toEndOf="@+id/deleteEvents"
+            app:layout_constraintStart_toStartOf="@+id/deleteEvents"
             app:layout_constraintTop_toTopOf="@+id/userImage" />
 
         <TextView
-            android:id="@+id/updatekuldeep"
+            android:id="@+id/updateEvents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -109,8 +110,8 @@
             android:textColor="#FFEB3B"
             android:textSize="@dimen/events_text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/deletekuldeep"
-            app:layout_constraintTop_toBottomOf="@+id/viewkuldeep" />
+            app:layout_constraintStart_toEndOf="@+id/deleteEvents"
+            app:layout_constraintTop_toBottomOf="@+id/viewEvents" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
