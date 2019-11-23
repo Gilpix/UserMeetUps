@@ -80,9 +80,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return delete;
     }
 
-    public Cursor viewAllProducts() {
+    public Cursor viewAllProducts(int USERID) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor c = db.rawQuery("SELECT * FROM " + TABLE_NAME +" WHERE USERID="+USERID, null);
 
         return c;
     }

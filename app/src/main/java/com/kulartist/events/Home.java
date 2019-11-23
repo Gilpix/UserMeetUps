@@ -2,12 +2,16 @@ package com.kulartist.events;
 
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -21,6 +25,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,11 +37,152 @@ import retrofit2.http.GET;
 
 public class Home extends AppCompatActivity {
 
+    public static int USERID=1;
 
-    public void dataBaseOpen(View view) {
+
+
+
+
+    public void shoAlertBox(String title, String message) {
+        // Initializing a new alert dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+
+        // Set a title for alert dialog
+        builder.setTitle(title);
+
+        // Show a message on alert dialog
+        builder.setMessage(message);
+
+        // Set the positive button
+        builder.setPositiveButton("ok",null);
+
+
+//        // Set the negative button
+//        builder.setNegativeButton("No", null);
+//
+//        // Set the neutral button
+//        builder.setNeutralButton("Cancel", null);
+
+        // Create the alert dialog
+        AlertDialog dialog = builder.create();
+
+        // Finally, display the alert dialog
+        dialog.show();
+
+        // Get the alert dialog buttons reference
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+       // Button negativeButton = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+       // Button neutralButton = dialog.getButton(AlertDialog.BUTTON_NEUTRAL);
+
+        // Change the alert dialog buttons text and background color
+        positiveButton.setTextColor(Color.parseColor("#1E88E5"));
+        //positiveButton.setBackgroundColor(Color.parseColor("#FFE1FCEA"));
+
+//        negativeButton.setTextColor(Color.parseColor("#FFFF0400"));
+//        negativeButton.setBackgroundColor(Color.parseColor("#FFFCB9B7"));
+//
+//        neutralButton.setTextColor(Color.parseColor("#FF1B5AAC"));
+//        neutralButton.setBackgroundColor(Color.parseColor("#FFD9E9FF"));
+    }
+
+
+
+
+
+
+
+
+
+
+    private void showMsg(String title, String message) {
+
+
+        new AlertDialog.Builder(Home.this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                }).setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        })
+                .setCancelable(false)
+                .create().show();
+
+
+    }
+
+    public void viewEvents(View view) {
+        DatabaseHelper dbHelper;
+        dbHelper = new DatabaseHelper(this, "", null, 2);
+        //Intent i=new Intent(Home.this,editDatabase.class);
+        //startActivity(i);
+
+         {
+            Cursor cursor = dbHelper.viewAllProducts(USERID);
+
+            if (cursor.getCount() == 0) {
+                shoAlertBox("error", "No Event Found");
+                return;
+            }
+
+            StringBuffer buffer = new StringBuffer();
+            while (cursor.moveToNext()) {
+                buffer.append("EventID: " + cursor.getString(0) + "\n");
+                buffer.append("Name: " + cursor.getString(1) + "\n");
+                buffer.append("Location: " + cursor.getString(2) + "\n");
+                buffer.append("StartTime: " + cursor.getString(3) + "\n");
+                buffer.append("EndTime: " + cursor.getString(4) + "\n");
+                buffer.append("UserID: " + cursor.getString(5) + "\n");
+                buffer.append("\n");
+            }
+
+             shoAlertBox("MeetUps", buffer.toString());
+        }
+
+
+    }
+
+    public void addEvent(View view) {
+
         Intent i=new Intent(Home.this,editDatabase.class);
+        i.putExtra("EXTRA_SESSION_ID", "Add Event");
+        startActivity(i);
+
+    }
+
+    public void updateEvent(View view) {
+
+        Intent i=new Intent(Home.this,editDatabase.class);
+        i.putExtra("EXTRA_SESSION_ID", "Update Event");
         startActivity(i);
     }
+
+    public void deleteEvent(View view) {
+
+        Intent i=new Intent(Home.this,editDatabase.class);
+        i.putExtra("EXTRA_SESSION_ID", "Delete Event");
+        startActivity(i);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     class eventUsers {
         /*
@@ -135,7 +281,7 @@ public class Home extends AppCompatActivity {
         }
 
         @Override
-        public View getView(int position, View view, ViewGroup viewGroup) {
+        public View getView(final int position, View view, ViewGroup viewGroup) {
             if(view==null)
             {
                 view=LayoutInflater.from(context).inflate(R.layout.model,viewGroup,false);
@@ -160,7 +306,8 @@ public class Home extends AppCompatActivity {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, thisSpacecraft.getName(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, thisSpacecraft.getName(), Toast.LENGTH_SHORT).show();
+                    USERID=position+1;
                 }
             });
 
@@ -209,6 +356,13 @@ public class Home extends AppCompatActivity {
     public void signOut(View view) {
         FirebaseAuth.getInstance().signOut();//logout
         startActivity(new Intent(getApplicationContext(),Login.class));
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
         finish();
     }
 }

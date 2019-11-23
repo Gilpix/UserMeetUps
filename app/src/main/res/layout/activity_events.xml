@@ -4,43 +4,60 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:scrollbars="vertical"
+    android:background="#5E35B1"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/modelEditTextHint"
+        android:background="#5E35B1"
         android:padding="8dp"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/eID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Event id"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#FFFFFF"
+            android:text="Event ID"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
 
         <EditText
             android:id="@+id/eventID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/modelEditTextHint"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#FFFFFF"
             android:hint="id" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/uId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="user id"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#FFFFFF"
+            android:text="User ID"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
 
         <EditText
             android:id="@+id/userID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/modelEditTextHint"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
             android:hint="user id" />
 
         <TextView
+            android:id="@+id/eName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#FFFFFF"
             android:text="Event Name"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
 
@@ -48,38 +65,56 @@
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:textColorHint="@color/modelEditTextHint"
             android:hint="name" />
 
         <TextView
+            android:id="@+id/eLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Location"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#FFFFFF"
+            android:text="Event Location"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
 
         <EditText
             android:id="@+id/location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:textColorHint="@color/modelEditTextHint"
             android:hint="location" />
 
         <TextView
+            android:id="@+id/eSt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Stsrt Time"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#FFFFFF"
+            android:text="Start Time"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
 
         <EditText
             android:id="@+id/startTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:textColorHint="@color/modelEditTextHint"
             android:hint="start time" />
 
         <TextView
+            android:id="@+id/eEt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:fontFamily="@font/aclonica"
+            android:textColor="#FFFFFF"
             android:text="End Time"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
 
@@ -87,6 +122,9 @@
             android:id="@+id/endTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:textColorHint="@color/modelEditTextHint"
             android:hint="end time" />
 
     </LinearLayout>

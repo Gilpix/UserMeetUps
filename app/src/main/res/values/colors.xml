@@ -2,5 +2,13 @@
 <resources>
     <color name="colorPrimary">#1E88E5</color>
     <color name="colorPrimaryDark">#1E88E5</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#FF133059</color>
+
+
+
+    <color name="modelEditTextHint">#FDCEC3C3</color>
+
+    <color name="statusBlue">#5E35B1</color>
+
+
 </resources>
